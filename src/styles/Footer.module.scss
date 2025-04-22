@@ -1,0 +1,22 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.footer {
+  background-color: $dark;
+  color: $white;
+  padding: 2rem 1rem;
+
+  p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+
+    a {
+      color: $primary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

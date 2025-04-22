@@ -1,0 +1,48 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.hero {
+  padding: 4rem 0;
+  background-color: $white;
+  text-align: center;
+
+  @include responsive(md) {
+    text-align: left;
+  }
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: $dark;
+  margin-bottom: 1rem;
+
+  @include responsive(sm) {
+    font-size: 2rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: $gray-700;
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+  }
+}
+
+.heroImage {
+  object-fit: cover;
+  border-radius: 1rem;
+  width: 100%;
+  height: auto;
+}

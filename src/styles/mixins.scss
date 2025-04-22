@@ -1,0 +1,23 @@
+@use "variables" as *;
+
+// Mixin for responsive media queries
+@mixin responsive($size) {
+  @if $size == small {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $size == medium {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $size == large {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+// Mixin for rounded corners
+@mixin rounded-corners($radius: 8px) {
+  border-radius: $radius;
+}

@@ -1,0 +1,60 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.header {
+  background-color: $primary;
+  padding: 0.75rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar {
+  background-color: transparent;
+  padding: 0 !important;
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $dark;
+  text-decoration: none;
+
+  &:hover {
+    color: $gray-700;
+  }
+}
+
+.toggle {
+  border: none;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.link {
+  color: $dark;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $gray-700;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .link {
+    padding-left: 0 !important;
+  }
+
+  .navbar-collapse {
+    background-color: $gray-700;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+}

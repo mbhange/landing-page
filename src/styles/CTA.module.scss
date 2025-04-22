@@ -1,0 +1,38 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.cta {
+  background-color: $primary;
+  color: $dark;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+
+  @include responsive(sm) {
+    font-size: 1.75rem;
+  }
+}
+
+.description {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+    transform: scale(1.03);
+  }
+}

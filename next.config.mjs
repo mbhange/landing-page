@@ -1,6 +1,16 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-};
+import path from "path";
 
-export default nextConfig;
+export default {
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    domains: ["example.com"],
+  },
+  webpack(config) {
+    config.resolve.alias["@"] = path.resolve(
+      new URL(".", import.meta.url).pathname,
+      "src"
+    );
+    return config;
+  },
+};
